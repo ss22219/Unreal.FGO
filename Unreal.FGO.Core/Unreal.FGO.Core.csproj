@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ED1DFA67-F601-46A5-96D9-2B7037018DB3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Unreal.FGO.Core</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Api\ApiClientCreateRole.cs" />
+    <Compile Include="Api\ApiClientLogin.cs" />
+    <Compile Include="Api\ApiClientNotifyZone.cs" />
+    <Compile Include="Api\ApiClientRegv3.cs" />
+    <Compile Include="Api\ApiClientRsa.cs" />
+    <Compile Include="Api\ApiClientUserInfo.cs" />
+    <Compile Include="Api\BaseResponse.cs" />
+    <Compile Include="Api\BaseRequest.cs" />
+    <Compile Include="Api\Battleresult.cs" />
+    <Compile Include="Api\Battlesetup.cs" />
+    <Compile Include="Api\Boxgachadraw.cs" />
+    <Compile Include="Api\Boxgachareset.cs" />
+    <Compile Include="Api\Decksetup.cs" />
+    <Compile Include="Api\Gachadraw.cs" />
+    <Compile Include="Api\Home.cs" />
+    <Compile Include="Api\Itemuse.cs" />
+    <Compile Include="Api\Login.cs" />
+    <Compile Include="Api\Logintomembercenter.cs" />
+    <Compile Include="Api\Member.cs" />
+    <Compile Include="Api\Presentlist.cs" />
+    <Compile Include="Api\Presentreceive.cs" />
+    <Compile Include="Api\Profileeditname.cs" />
+    <Compile Include="Api\Toplogin.cs" />
+    <Compile Include="Api\Tutorialprogress.cs" />
+    <Compile Include="Api\Tutorialset.cs" />
+    <Compile Include="QuestChecker.cs" />
+    <Compile Include="ServerApi.cs" />
+    <Compile Include="SvtExt.cs" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.SharpZipLib.dll.0.85.4.369\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.2-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Compile Include="Asset.cs" />
+    <Compile Include="AssetManage.cs" />
+    <Compile Include="AssetData.cs" />
+    <Compile Include="CryptData.cs" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Unreal.FGO.Common\Unreal.FGO.Common.csproj">
+      <Project>{87b729b1-ee51-4dc7-aec5-456fd4336cfe}</Project>
+      <Name>Unreal.FGO.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F611F269-BAF9-4B93-9276-165CC4A74523}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unreal.FGO.Repostory</RootNamespace>
+    <AssemblyName>Unreal.FGO.Repostory</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.4.0\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.4.0\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.4.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Db.cs" />
+    <Compile Include="Map\UserMap.cs" />
+    <Compile Include="Migrations\201701010044059_InitialCreate.cs" />
+    <Compile Include="Migrations\201701010044059_InitialCreate.Designer.cs">
+      <DependentUpon>201701010044059_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701010215119_00001.cs" />
+    <Compile Include="Migrations\201701010215119_00001.Designer.cs">
+      <DependentUpon>201701010215119_00001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701011222526_00002.cs" />
+    <Compile Include="Migrations\201701011222526_00002.Designer.cs">
+      <DependentUpon>201701011222526_00002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701011555321_00003.cs" />
+    <Compile Include="Migrations\201701011555321_00003.Designer.cs">
+      <DependentUpon>201701011555321_00003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701022011449_0004.cs" />
+    <Compile Include="Migrations\201701022011449_0004.Designer.cs">
+      <DependentUpon>201701022011449_0004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701030437304_0005.cs" />
+    <Compile Include="Migrations\201701030437304_0005.Designer.cs">
+      <DependentUpon>201701030437304_0005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701030605309_0006.cs" />
+    <Compile Include="Migrations\201701030605309_0006.Designer.cs">
+      <DependentUpon>201701030605309_0006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701030727231_0007.cs" />
+    <Compile Include="Migrations\201701030727231_0007.Designer.cs">
+      <DependentUpon>201701030727231_0007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701031507030_0008.cs" />
+    <Compile Include="Migrations\201701031507030_0008.Designer.cs">
+      <DependentUpon>201701031507030_0008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701040204352_0009.cs" />
+    <Compile Include="Migrations\201701040204352_0009.Designer.cs">
+      <DependentUpon>201701040204352_0009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701040418068_00010.cs" />
+    <Compile Include="Migrations\201701040418068_00010.Designer.cs">
+      <DependentUpon>201701040418068_00010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701070318298_00011.cs" />
+    <Compile Include="Migrations\201701070318298_00011.Designer.cs">
+      <DependentUpon>201701070318298_00011.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701081947224_quest_info.cs" />
+    <Compile Include="Migrations\201701081947224_quest_info.Designer.cs">
+      <DependentUpon>201701081947224_quest_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701100732233_user_role.user_game.cs" />
+    <Compile Include="Migrations\201701100732233_user_role.user_game.Designer.cs">
+      <DependentUpon>201701100732233_user_role.user_game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701101117032_role_data.last_login.cs" />
+    <Compile Include="Migrations\201701101117032_role_data.last_login.Designer.cs">
+      <DependentUpon>201701101117032_role_data.last_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701110839363_role_data.stone.cs" />
+    <Compile Include="Migrations\201701110839363_role_data.stone.Designer.cs">
+      <DependentUpon>201701110839363_role_data.stone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701130130004_user_item.cs" />
+    <Compile Include="Migrations\201701130130004_user_item.Designer.cs">
+      <DependentUpon>201701130130004_user_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701141528098_cookie.cs" />
+    <Compile Include="Migrations\201701141528098_cookie.Designer.cs">
+      <DependentUpon>201701141528098_cookie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701150749566_battle_id.cs" />
+    <Compile Include="Migrations\201701150749566_battle_id.Designer.cs">
+      <DependentUpon>201701150749566_battle_id.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701180647184_chaptered.cs" />
+    <Compile Include="Migrations\201701180647184_chaptered.Designer.cs">
+      <DependentUpon>201701180647184_chaptered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701190539484_last_task_time.cs" />
+    <Compile Include="Migrations\201701190539484_last_task_time.Designer.cs">
+      <DependentUpon>201701190539484_last_task_time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\ModelExt.cs" />
+    <Compile Include="Model\models.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701010044059_InitialCreate.resx">
+      <DependentUpon>201701010044059_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701010215119_00001.resx">
+      <DependentUpon>201701010215119_00001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701011222526_00002.resx">
+      <DependentUpon>201701011222526_00002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701011555321_00003.resx">
+      <DependentUpon>201701011555321_00003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701022011449_0004.resx">
+      <DependentUpon>201701022011449_0004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701030437304_0005.resx">
+      <DependentUpon>201701030437304_0005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701030605309_0006.resx">
+      <DependentUpon>201701030605309_0006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701030727231_0007.resx">
+      <DependentUpon>201701030727231_0007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701031507030_0008.resx">
+      <DependentUpon>201701031507030_0008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701040204352_0009.resx">
+      <DependentUpon>201701040204352_0009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701040418068_00010.resx">
+      <DependentUpon>201701040418068_00010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701070318298_00011.resx">
+      <DependentUpon>201701070318298_00011.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701081947224_quest_info.resx">
+      <DependentUpon>201701081947224_quest_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701100732233_user_role.user_game.resx">
+      <DependentUpon>201701100732233_user_role.user_game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701101117032_role_data.last_login.resx">
+      <DependentUpon>201701101117032_role_data.last_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701110839363_role_data.stone.resx">
+      <DependentUpon>201701110839363_role_data.stone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701130130004_user_item.resx">
+      <DependentUpon>201701130130004_user_item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701141528098_cookie.resx">
+      <DependentUpon>201701141528098_cookie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701150749566_battle_id.resx">
+      <DependentUpon>201701150749566_battle_id.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701180647184_chaptered.resx">
+      <DependentUpon>201701180647184_chaptered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701190539484_last_task_time.resx">
+      <DependentUpon>201701190539484_last_task_time.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

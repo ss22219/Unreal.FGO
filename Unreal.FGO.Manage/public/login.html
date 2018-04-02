@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="referrer" content="always">
+    <title>
+        Unreal FGO加油站
+    </title>
+    <script src="static.hdslb.com/js/jquery.min.js"></script>
+    <script src="jquery.fn/common.js"></script>
+    <script src="jquery.fn/api.js"></script>
+    <script src="jquery.fn/control.js"></script>
+    <script src="jquery.fn/validate.js"></script>
+    <link rel="stylesheet" href="static-s.bilibili.com/css/core-v5/base.css">
+    <link id="css" rel="stylesheet" type="text/css" href="static-s.bilibili.com/passport/css/zclc2.1460959081.css">
+    <link charset="utf-8" rel="stylesheet" href="static-s.bilibili.com/passport/seajs/plugin/dialog/skins/white.css">
+    <style>
+        .footer {
+            height: 50px;
+            background: rgb(0,160,216);
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top_bg">
+        <div class="top"></div>
+    </div>
+    <div class="head_foot_content">
+        <div class="zcdl_content pos_re">
+            <div class="line"></div>
+            <div class="reg-title title2" style="background: url(static-s.bilibili.com/passport/img/t2.png) no-repeat 50%,50%;"></div>
+            <div class="center_title">
+                <form data-validate method="post" action="user/login" onsubmit="return false;" jveventinit="1">
+                    <div class="new_phone center_div">
+                        <input data-field="username" class="user_id_password" data-rule="required;;minLength(6);maxLength(16)" type="text" placeholder="用户名（例：abc123）">
+                    </div>
+                    <div class="new_phone center_div">
+                        <input data-field="password" class="user_id_password" data-rule="required;minLength(6);maxLength(16)" type="password" placeholder="密码（6-16个字符组成，区分大小写）">
+                    </div>
+                    <input class="next_step center_div mar_t_120 ys-a" type="submit" value="登陆" id="regSubmit">
+                    <div class="clearfix">
+                        <a href="register.html" class="blue">没有账号，马上注册&gt;</a>
+                    </div>
+                </form>
+            </div>
+            <div class="phone_window" id="phone_window"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>
